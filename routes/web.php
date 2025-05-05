@@ -18,3 +18,7 @@ Route::get('/dashboard', function() {
 Route::get('/users', function() {
     return view('users.index');
 });
+
+Route::get('/oems', function() {
+    return view('oems.index');
+});

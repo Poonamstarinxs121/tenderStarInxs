@@ -11,7 +11,7 @@
             <i class="fas fa-building mr-3"></i>
             Companies
         </a>
-        <a href="#" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100">
+        <a href="/oems" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100">
             <i class="fas fa-handshake mr-3"></i>
             OEMs
         </a>
