@@ -163,12 +163,12 @@
                                             <option value="inactive">Inactive</option>
                                         </select>
                                     </div>
-                                    <div class="flex justify-end space-x-2">
-                                        <button type="button" onclick="closeModal()" class="px-4 py-2 text-gray-600 border rounded-md hover:bg-gray-100">
+                                    <div class="flex justify-end space-x-2 mt-6">
+                                        <button type="button" onclick="closeModal()" class="px-6 py-2 text-gray-600 border rounded-md hover:bg-gray-100">
                                             Cancel
                                         </button>
-                                        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
-                                            Save
+                                        <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                                            Create
                                         </button>
                                     </div>
                                 </form>
