@@ -22,3 +22,6 @@ Route::get('/users', function() {
 Route::get('/oems', function() {
     return view('oems.index');
 });
+
+Route::get('/companies', [App\Http\Controllers\CompanyController::class, 'index'])->name('companies.index');
+Route::post('/companies', [App\Http\Controllers\CompanyController::class, 'store'])->name('companies.store');

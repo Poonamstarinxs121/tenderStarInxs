@@ -1,0 +1,22 @@
+
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Company;
+use Illuminate\Http\Request;
+
+class CompanyController extends Controller
+{
+    public function index()
+    {
+        $companies = Company::all();
+        return view('companies.index', compact('companies'));
+    }
+
+    public function store(Request $request)
+    {
+        $company = Company::create($request->all());
+        return redirect()->back()->with('success', 'Company created successfully');
+    }
+}
