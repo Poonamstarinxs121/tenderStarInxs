@@ -107,18 +107,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4">StarInxs Solution Pvt Ltd</td>
-                                    <td class="py-3 px-4">Amit</td>
-                                    <td class="py-3 px-4">demo@gmail.com</td>
-                                    <td class="py-3 px-4">+914567890</td>
-                                    <td class="py-3 px-4">Bhopal, Madhya Pradesh</td>
-                                    <td class="py-3 px-4"><span class="px-2 py-1 bg-green-100 text-green-800 rounded">Active</span></td>
-                                    <td class="py-3 px-4 space-x-2">
-                                        <button class="text-blue-500 hover:text-blue-700"><i class="fas fa-edit"></i></button>
-                                        <button class="text-red-500 hover:text-red-700"><i class="fas fa-trash"></i></button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
