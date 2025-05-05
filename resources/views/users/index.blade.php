@@ -160,16 +160,27 @@
                 </div>
 
                 <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        window.openUserModal = function() {
-                            document.getElementById('createUserModal').classList.remove('hidden');
-                        }
+    document.addEventListener('DOMContentLoaded', function() {
+        window.openUserModal = function() {
+            document.getElementById('createUserModal').classList.remove('hidden');
+        }
 
-                        window.closeUserModal = function() {
-                            document.getElementById('createUserModal').classList.add('hidden');
-                        }
-                    });
-                </script>
+        window.closeUserModal = function() {
+            document.getElementById('createUserModal').classList.add('hidden');
+        }
+
+        // Make sure modal buttons are hooked up
+        const addUserBtn = document.querySelector('[onclick="openUserModal()"]');
+        const closeUserBtn = document.querySelector('[onclick="closeUserModal()"]');
+        
+        if (addUserBtn) {
+            addUserBtn.addEventListener('click', openUserModal);
+        }
+        if (closeUserBtn) {
+            closeUserBtn.addEventListener('click', closeUserModal);
+        }
+    });
+</script>
             </div>
         </div>
     </div>

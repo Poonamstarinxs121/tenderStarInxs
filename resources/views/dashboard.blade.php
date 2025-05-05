@@ -176,14 +176,16 @@
                         </div>
 
                         <script>
-                            function openModal() {
-                                document.getElementById('addCompanyModal').classList.remove('hidden');
-                            }
+    document.addEventListener('DOMContentLoaded', function() {
+        window.openModal = function() {
+            document.getElementById('addCompanyModal').classList.remove('hidden');
+        }
 
-                            function closeModal() {
-                                document.getElementById('addCompanyModal').classList.add('hidden');
-                            }
-                        </script>
+        window.closeModal = function() {
+            document.getElementById('addCompanyModal').classList.add('hidden');
+        }
+    });
+</script>
                     </div>
                 </div>
 
