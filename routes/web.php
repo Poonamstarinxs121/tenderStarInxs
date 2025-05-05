@@ -14,3 +14,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/dashboard', function() {
     return view('dashboard');
 });
+
+Route::get('/users', function() {
+    return view('users.index');
+});

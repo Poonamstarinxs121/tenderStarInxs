@@ -31,7 +31,7 @@
                     <i class="fas fa-users mr-3"></i>
                     Customers
                 </a>
-                <a href="#" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100">
+                <a href="/users" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100">
                     <i class="fas fa-user-cog mr-3"></i>
                     User Management
                 </a>
