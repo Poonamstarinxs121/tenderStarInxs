@@ -56,8 +56,8 @@
                 </div>
 
                 <!-- Add OEM Modal -->
-                <div id="addOEMModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden flex items-center justify-center">
-                    <div class="bg-white rounded-lg p-6 w-[800px]">
+                <div id="addOEMModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden flex items-center justify-center overflow-y-auto">
+                    <div class="bg-white rounded-lg p-6 w-[800px] max-h-[90vh] overflow-y-auto my-8">
                         <div class="flex justify-between items-center mb-4">
                             <h2 class="text-xl font-semibold">Add New OEM</h2>
                             <button onclick="closeOEMModal()" class="text-gray-500 hover:text-gray-700">
