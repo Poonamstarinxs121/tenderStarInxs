@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +48,18 @@
                             </thead>
                             <tbody>
                                 <tr class="border-b">
+                                    <td class="py-3 px-4">John Doe</td>
+                                    <td class="py-3 px-4">john@example.com</td>
+                                    <td class="py-3 px-4">Admin</td>
+                                    <td class="py-3 px-4">IT</td>
+                                    <td class="py-3 px-4"><span class="px-2 py-1 bg-green-100 text-green-800 rounded">Active</span></td>
+                                    <td class="py-3 px-4">2024-01-20</td>
+                                    <td class="py-3 px-4 space-x-2">
+                                        <button class="text-blue-500 hover:text-blue-700"><i class="fas fa-edit"></i></button>
+                                        <button class="text-red-500 hover:text-red-700"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
                                     <td class="py-3 px-4">Poonam Amale</td>
                                     <td class="py-3 px-4">poonam@starinxs.com</td>
                                     <td class="py-3 px-4">user</td>
@@ -66,7 +77,7 @@
                 </div>
 
                 <!-- Create User Modal -->
-                <div id="createUserModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden flex items-center justify-center overflow-y-auto">
+                <div id="addUserModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden flex items-center justify-center overflow-y-auto">
                     <div class="bg-white rounded-lg p-6 w-[800px] max-h-[90vh] overflow-y-auto my-8">
                         <div class="flex justify-between items-center mb-4">
                             <h2 class="text-xl font-semibold">Create User</h2>
@@ -158,31 +169,31 @@
                         </form>
                     </div>
                 </div>
-
-                <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        window.openUserModal = function() {
-            document.getElementById('createUserModal').classList.remove('hidden');
-        }
-
-        window.closeUserModal = function() {
-            document.getElementById('createUserModal').classList.add('hidden');
-        }
-
-        // Make sure modal buttons are hooked up
-        const addUserBtn = document.querySelector('[onclick="openUserModal()"]');
-        const closeUserBtn = document.querySelector('[onclick="closeUserModal()"]');
-        
-        if (addUserBtn) {
-            addUserBtn.addEventListener('click', openUserModal);
-        }
-        if (closeUserBtn) {
-            closeUserBtn.addEventListener('click', closeUserModal);
-        }
-    });
-</script>
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.openUserModal = function() {
+                document.getElementById('addUserModal').classList.remove('hidden');
+            }
+
+            window.closeUserModal = function() {
+                document.getElementById('addUserModal').classList.add('hidden');
+            }
+
+            // Make sure modal buttons are hooked up
+            const addUserBtn = document.querySelector('[onclick="openUserModal()"]');
+            const closeUserBtn = document.querySelector('[onclick="closeUserModal()"]');
+
+            if (addUserBtn) {
+                addUserBtn.addEventListener('click', openUserModal);
+            }
+            if (closeUserBtn) {
+                closeUserBtn.addEventListener('click', closeUserModal);
+            }
+        });
+    </script>
 </body>
 </html>
