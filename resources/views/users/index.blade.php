@@ -160,13 +160,15 @@
                 </div>
 
                 <script>
-                    function openUserModal() {
-                        document.getElementById('createUserModal').classList.remove('hidden');
-                    }
+                    document.addEventListener('DOMContentLoaded', function() {
+                        window.openUserModal = function() {
+                            document.getElementById('createUserModal').classList.remove('hidden');
+                        }
 
-                    function closeUserModal() {
-                        document.getElementById('createUserModal').classList.add('hidden');
-                    }
+                        window.closeUserModal = function() {
+                            document.getElementById('createUserModal').classList.add('hidden');
+                        }
+                    });
                 </script>
             </div>
         </div>
