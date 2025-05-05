@@ -80,9 +80,110 @@
                         <button class="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50">
                             <i class="fas fa-download mr-2"></i>Export
                         </button>
-                        <button class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                        <button onclick="openModal()" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
                             <i class="fas fa-plus mr-2"></i>Add Company
                         </button>
+
+                        <!-- Add Company Modal -->
+                        <div id="addCompanyModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden flex items-center justify-center">
+                            <div class="bg-white rounded-lg p-6 w-[500px]">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h2 class="text-xl font-semibold">Add New Company</h2>
+                                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <form>
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="companyName">
+                                            Company Name*
+                                        </label>
+                                        <input type="text" id="companyName" placeholder="Enter company name" class="w-full px-3 py-2 border rounded-md">
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 mb-4">
+                                        <div>
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="cin">
+                                                CIN
+                                            </label>
+                                            <input type="text" id="cin" placeholder="Corporate Identity" class="w-full px-3 py-2 border rounded-md">
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="pan">
+                                                PAN
+                                            </label>
+                                            <input type="text" id="pan" placeholder="Permanent Account" class="w-full px-3 py-2 border rounded-md">
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="gst">
+                                                GST
+                                            </label>
+                                            <input type="text" id="gst" placeholder="GST Number" class="w-full px-3 py-2 border rounded-md">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="contactPerson">
+                                            Contact Person*
+                                        </label>
+                                        <input type="text" id="contactPerson" placeholder="Enter contact person" class="w-full px-3 py-2 border rounded-md">
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4 mb-4">
+                                        <div>
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                                                Email*
+                                            </label>
+                                            <input type="email" id="email" placeholder="example@company.com" class="w-full px-3 py-2 border rounded-md">
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                                                Phone*
+                                            </label>
+                                            <input type="tel" id="phone" placeholder="+1 (234) 567-8901" class="w-full px-3 py-2 border rounded-md">
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4 mb-4">
+                                        <div>
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="location">
+                                                Location*
+                                            </label>
+                                            <input type="text" id="location" placeholder="City, Country" class="w-full px-3 py-2 border rounded-md">
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="pinCode">
+                                                PIN Code
+                                            </label>
+                                            <input type="text" id="pinCode" placeholder="Postal / ZIP Code" class="w-full px-3 py-2 border rounded-md">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 text-sm font-bold mb-2" for="status">
+                                            Status*
+                                        </label>
+                                        <select id="status" class="w-full px-3 py-2 border rounded-md">
+                                            <option value="active">Active</option>
+                                            <option value="inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex justify-end space-x-2">
+                                        <button type="button" onclick="closeModal()" class="px-4 py-2 text-gray-600 border rounded-md hover:bg-gray-100">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                                            Save
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <script>
+                            function openModal() {
+                                document.getElementById('addCompanyModal').classList.remove('hidden');
+                            }
+
+                            function closeModal() {
+                                document.getElementById('addCompanyModal').classList.add('hidden');
+                            }
+                        </script>
                     </div>
                 </div>
 
