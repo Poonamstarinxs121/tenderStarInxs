@@ -1,0 +1,28 @@
+modules = ["php-8.2", "mysql-8.0"]
+run = "php artisan serve --host=0.0.0.0 --port=3000"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["php", "artisan", "serve", "--host=0.0.0.0", "--port=3000"]
+
+[workflows]
+runButton = "Laravel Server"
+
+[[workflows.workflow]]
+name = "Laravel Server"
+author = 41534803
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "php artisan serve --host=0.0.0.0 --port=5000"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
