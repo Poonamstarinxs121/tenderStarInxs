@@ -85,76 +85,58 @@
                                 <i class="fas fa-times"></i>
                             </button>
                         </div>
-                        <form>
+                        <form action="{{ route('users.store') }}" method="POST">
+                            @csrf
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">
-                                        First Name<span class="text-red-500">*</span>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                                        Name<span class="text-red-500">*</span>
                                     </label>
-                                    <input type="text" id="firstName" placeholder="First Name" class="w-full px-3 py-2 border rounded-md">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-                                        Last Name<span class="text-red-500">*</span>
-                                    </label>
-                                    <input type="text" id="lastName" placeholder="Last Name" class="w-full px-3 py-2 border rounded-md">
+                                    <input type="text" name="name" id="name" required class="w-full px-3 py-2 border rounded-md">
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                                        Email ID<span class="text-red-500">*</span>
+                                        Email<span class="text-red-500">*</span>
                                     </label>
-                                    <input type="email" id="email" placeholder="Email Id" class="w-full px-3 py-2 border rounded-md">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="contact">
-                                        Contact No<span class="text-red-500">*</span>
-                                    </label>
-                                    <input type="tel" id="contact" placeholder="Contact No" class="w-full px-3 py-2 border rounded-md">
+                                    <input type="email" name="email" id="email" required class="w-full px-3 py-2 border rounded-md">
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
                                         Password<span class="text-red-500">*</span>
                                     </label>
-                                    <input type="password" id="password" placeholder="Password" class="w-full px-3 py-2 border rounded-md">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="state">
-                                        State
-                                    </label>
-                                    <select id="state" class="w-full px-3 py-2 border rounded-md">
-                                        <option value="">Not Classified</option>
-                                    </select>
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="city">
-                                        City
-                                    </label>
-                                    <select id="city" class="w-full px-3 py-2 border rounded-md">
-                                        <option value="">Select City</option>
-                                    </select>
+                                    <input type="password" name="password" id="password" required class="w-full px-3 py-2 border rounded-md">
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="department">
                                         Department<span class="text-red-500">*</span>
                                     </label>
-                                    <select id="department" class="w-full px-3 py-2 border rounded-md">
+                                    <select name="department" id="department" required class="w-full px-3 py-2 border rounded-md">
                                         <option value="">Select Department</option>
+                                        <option value="IT">IT</option>
+                                        <option value="HR">HR</option>
+                                        <option value="Finance">Finance</option>
+                                        <option value="Operations">Operations</option>
                                     </select>
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="role">
                                         Role<span class="text-red-500">*</span>
                                     </label>
-                                    <select id="role" class="w-full px-3 py-2 border rounded-md">
+                                    <select name="role" id="role" required class="w-full px-3 py-2 border rounded-md">
                                         <option value="">Select Role</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="manager">Manager</option>
+                                        <option value="user">User</option>
                                     </select>
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="userType">
                                         User Type<span class="text-red-500">*</span>
                                     </label>
-                                    <select id="userType" class="w-full px-3 py-2 border rounded-md">
+                                    <select name="userType" id="userType" required class="w-full px-3 py-2 border rounded-md">
                                         <option value="">Select User Type</option>
+                                        <option value="internal">Internal</option>
+                                        <option value="external">External</option>
                                     </select>
                                 </div>
                             </div>

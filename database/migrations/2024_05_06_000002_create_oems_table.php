@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('oems', function (Blueprint $table) {
@@ -16,15 +13,12 @@ return new class extends Migration
             $table->string('company_name');
             $table->string('contact_person');
             $table->string('phone_number');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('oems');

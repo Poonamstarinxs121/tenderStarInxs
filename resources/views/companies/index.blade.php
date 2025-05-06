@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,12 +90,6 @@
                                     <input type="text" name="name" id="name" required class="w-full px-3 py-2 border rounded-md">
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="contact_person">
-                                        Contact Person*
-                                    </label>
-                                    <input type="text" name="contact_person" id="contact_person" required class="w-full px-3 py-2 border rounded-md">
-                                </div>
-                                <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                                         Email*
                                     </label>
@@ -104,24 +97,45 @@
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
-                                        Phone*
+                                        Phone
                                     </label>
-                                    <input type="tel" name="phone" id="phone" required class="w-full px-3 py-2 border rounded-md">
+                                    <input type="text" name="phone" id="phone" class="w-full px-3 py-2 border rounded-md">
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="location">
-                                        Location
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+                                        Address
                                     </label>
-                                    <input type="text" name="location" id="location" class="w-full px-3 py-2 border rounded-md">
+                                    <input type="text" name="address" id="address" class="w-full px-3 py-2 border rounded-md">
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="status">
-                                        Status
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="city">
+                                        City
                                     </label>
-                                    <select name="status" id="status" class="w-full px-3 py-2 border rounded-md">
-                                        <option value="Active">Active</option>
-                                        <option value="Inactive">Inactive</option>
-                                    </select>
+                                    <input type="text" name="city" id="city" class="w-full px-3 py-2 border rounded-md">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="state">
+                                        State
+                                    </label>
+                                    <input type="text" name="state" id="state" class="w-full px-3 py-2 border rounded-md">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="country">
+                                        Country
+                                    </label>
+                                    <input type="text" name="country" id="country" class="w-full px-3 py-2 border rounded-md">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="postal_code">
+                                        Postal Code
+                                    </label>
+                                    <input type="text" name="postal_code" id="postal_code" class="w-full px-3 py-2 border rounded-md">
+                                </div>
+                                <div class="mb-4 col-span-2">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="description">
+                                        Description
+                                    </label>
+                                    <textarea name="description" id="description" class="w-full px-3 py-2 border rounded-md"></textarea>
                                 </div>
                             </div>
                             <div class="flex justify-end space-x-2 mt-6">
@@ -129,7 +143,7 @@
                                     Cancel
                                 </button>
                                 <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
-                                    Create
+                                    Save
                                 </button>
                             </div>
                         </form>

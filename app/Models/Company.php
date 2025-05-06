@@ -7,10 +7,13 @@ class Company extends Model
 {
     protected $fillable = [
         'name',
-        'contact_person',
         'email',
         'phone',
-        'location',
-        'status'
+        'address',
+        'city',
+        'state',
+        'country',
+        'postal_code',
+        'description'
     ];
 }
